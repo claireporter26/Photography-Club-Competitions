@@ -29,6 +29,34 @@ body {
 .competitions {
     display: flex;
     justify-content: space-around;
+    
+}
+
+.competition-container {
+    justify-content: space-around;
+}
+
+.competitions_img-row {
+    height: 150px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.competitions_img-bg {
+    max-width: 150px;
+    height: 150px;
+    margin: .5em;
+    background-color: rgba(8, 7, 7, 0.021);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.competition_img {
+    max-height: 150px;
+    max-width: 150px;
+    
 }
 
 footer {
