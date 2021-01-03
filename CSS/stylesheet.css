@@ -14,9 +14,21 @@ body {
     margin: auto;
 }
 
+.main-container-lg{
+    width: 90%;
+    max-width: 1200px;
+    margin: 2em auto;
+    text-align: center;
+}
+
 .registration-container {
     margin-top: 3em;
     margin-bottom: 3em;
+}
+
+.competitions {
+    display: flex;
+    justify-content: space-around;
 }
 
 footer {
@@ -63,6 +75,15 @@ footer {
 
     .btn-submit {
         margin: 1.2em auto;
+    }
+
+    .competitions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .competitions-cards {
+        margin-bottom: 2em;
     }
 }
 /* 
