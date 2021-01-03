@@ -37,7 +37,7 @@ body {
 }
 
 .competitions_img-row {
-    height: 150px;
+    /* height: 150px; */
     align-items: center;
     justify-content: space-evenly;
 }
@@ -83,6 +83,14 @@ footer {
        margin-top: 2em;
    } 
 
+   /* .competitions_img-row {
+    margin-bottom: 1em;
+} */
+
+.competitions_img-bg {
+    margin-bottom: 1em;
+}
+
 
 }
 
@@ -112,6 +120,14 @@ footer {
 
     .competitions-cards {
         margin-bottom: 2em;
+    }
+/* 
+    .competitions_img-row {
+        margin-bottom: 1em;
+    } */
+
+    .competitions_img-bg {
+        margin-bottom: 1em;
     }
 }
 /* 
