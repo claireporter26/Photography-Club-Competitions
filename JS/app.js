@@ -5,24 +5,24 @@
 //     navMain.classList.toggle('nav--visible');
 // })
 
-var exampleModal = document.getElementById('imgZoomModal')
+let imageCheckbox = document.getElementById("image-checkbox");
+
+
+
+let exampleModal = document.getElementById('imgZoomModal')
 exampleModal.addEventListener('show.bs.modal', function (event) {
-  // Button that triggered the modal
-  
-  var chosenImage = event.relatedTarget.src;
-//   console.log(chosenImage)
-  // Extract info from data-bs-* attributes
-//   var largeImage = chosenImage.getAttribute('data-bs-whatever');
-  // If necessary, you could initiate an AJAX request here
-  // and then do the updating in a callback.
-  //
-  // Update the modal's content.
-  
-//   var imageArea = exampleModal.querySelector(".modal-image")
-  var imageArea = exampleModal.querySelector(".modal-image")
+  let chosenImage = event.relatedTarget.src;
+  let imageArea = exampleModal.querySelector(".modal-image")
 
   imageArea.src = chosenImage;
  
-  
-  
 })
+
+imageCheckbox.addEventListener("click", function(){
+  alert("working checkbox")
+
+});
+
+// function imageCheckboxToggle(){
+//   alert("working checkbox")
+// }

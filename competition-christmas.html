@@ -11,8 +11,8 @@
     <div class="modal fade" id="imgZoomModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl ">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Image</h5>
+            <div class="modal-header d-flex justify-content-end">
+              <!-- <h5 class="modal-title" id="exampleModalLabel">Image</h5> -->
 
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
@@ -20,9 +20,13 @@
               <img class="modal-image" src="" alt="">
               <p class="modal-text"></p>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Send message</button>
+            <div class="modal-footer d-flex justify-content-between align-content-center">
+                <div class="image-checkbox__area">
+                    <label for="image-checkbox" class="mb-0">Choose as Favourite Image</label>
+                    <input type="checkbox" class="mx-2 my-0" id="image-checkbox" name="image-checkbox" value="#">
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
             </div>
           </div>
         </div>
