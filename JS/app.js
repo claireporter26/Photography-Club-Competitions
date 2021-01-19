@@ -12,6 +12,7 @@ let imgBackground = document.querySelectorAll(".competitions_img-bg");
 let btnChooseImg = document.querySelectorAll(".btn__img-choice");
 let imgHover;
 let image = document.querySelectorAll(".competition_img")
+
 // let currentImageCheckbox;
 
 
@@ -58,21 +59,47 @@ imageCheckbox.addEventListener("change", function(){
 // });
 
 
-image.forEach(function(item){
+// image.forEach(function(item){
+  imgBackground.forEach(function(item){
   imgHover = item;
-  let imgParent = imgHover.parentElement;
-  let imgBtn = imgParent.lastElementChild
+  // let imgParent = imgHover.parentElement;
+  // let imgBtn = item.lastElementChild
+  let imgBtn = imgHover.lastElementChild
 
 
 
   item.addEventListener("mouseover", function(){
     
-    
-    console.log(imgBtn.innerHTML)
-    imgBtn.classList.toggle("display-toggle")
-    
+    if (imgBtn.classList.contains("display-toggle") == false){
+      
+      imgBtn.classList.add("display-toggle")
+    } 
     
   });
+
+  item.addEventListener("mouseout", function(){
+    
+    if (imgBtn.classList.contains("display-toggle")){
+      
+      imgBtn.classList.remove("display-toggle")
+    } 
+    
+  });
+})
+
+btnChooseImg.forEach(function(btn){
+  btn.addEventListener("click", function(e){
+    let button = e.target;
+    let buttonParent = button.parentElement;
+
+    if (button.innerHTML == "Choose"){
+      buttonParent.classList.add("selected-image");
+      button.innerHTML = `Deselect`
+    } else if (button.innerHTML == "Deselect"){
+      buttonParent.classList.remove("selected-image");
+      button.innerHTML = `Choose`
+    }
+  })
 })
 
 // for(let i = 0; i < imgBackground.length; i++){
