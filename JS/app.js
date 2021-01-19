@@ -12,6 +12,7 @@ let imgBackground = document.querySelectorAll(".competitions_img-bg");
 let btnChooseImg = document.querySelectorAll(".btn__img-choice");
 let imgHover;
 let image = document.querySelectorAll(".competition_img")
+let imgCount = 0;
 
 // let currentImageCheckbox;
 
@@ -92,12 +93,16 @@ btnChooseImg.forEach(function(btn){
     let button = e.target;
     let buttonParent = button.parentElement;
 
-    if (button.innerHTML == "Choose"){
+    if (button.innerHTML == "Vote"){
       buttonParent.classList.add("selected-image");
-      button.innerHTML = `Deselect`
+      button.innerHTML = `Deselect`;
+      imgCount++;
+      console.log(imgCount)
     } else if (button.innerHTML == "Deselect"){
       buttonParent.classList.remove("selected-image");
-      button.innerHTML = `Choose`
+      button.innerHTML = `Vote`;
+      imgCount--;
+      console.log(imgCount)
     }
   })
 })
