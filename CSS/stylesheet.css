@@ -75,13 +75,21 @@ body {
 .competition_img {
     max-height: 140px;
     max-width: 140px;
+    cursor: pointer;
     
 }
 
 .btn__img-choice {
     position: absolute;
-    bottom: 1em;
+    bottom: .3em;
     display: none;
+}
+
+.btn-submit-votes {
+    background-color: rgb(64, 204, 64);
+    opacity: 0;
+    pointer-events: none;
+    text-transform: uppercase;
 }
 
 .display-toggle {

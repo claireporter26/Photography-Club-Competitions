@@ -5,7 +5,7 @@
 //     navMain.classList.toggle('nav--visible');
 // })
 
-let imageCheckbox = document.getElementById("image-checkbox");
+
 let chosenImage;
 let chosenImageTarget;
 let imgBackground = document.querySelectorAll(".competitions_img-bg");
@@ -13,6 +13,8 @@ let btnChooseImg = document.querySelectorAll(".btn__img-choice");
 let imgHover;
 let image = document.querySelectorAll(".competition_img")
 let imgCount = 0;
+let counterArea = document.querySelector(".counter")
+let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
 
 // let currentImageCheckbox;
 
@@ -33,26 +35,8 @@ exampleModal.addEventListener('show.bs.modal', function (event) {
   imageArea.src = chosenImage;
  
 })
-// imageCheckbox.addEventListener("click", imageCheckboxToggle())
-
-// imageCheckbox.addEventListener("click", function(){
-  
-//   chosenImageTarget.parentElement.classList.toggle("selected-image")
-//   console.log(chosenImageTarget)
-// });
-
-imageCheckbox.addEventListener("change", function(){
-  if (this.checked) {
-    chosenImageTarget.parentElement.classList.add("selected-image")
-  } else {
-    chosenImageTarget.parentElement.classList.remove("selected-image")
-  }
 
 
-
-  // chosenImageTarget.parentElement.classList.toggle("selected-image")
-  // console.log(chosenImageTarget)
-});
 
 // imgBackground.addEventListener("onMouseOver", function(event){
 //   let chooseBtn = event.target;
@@ -60,8 +44,8 @@ imageCheckbox.addEventListener("change", function(){
 // });
 
 
-// image.forEach(function(item){
-  imgBackground.forEach(function(item){
+
+imgBackground.forEach(function(item){
   imgHover = item;
   // let imgParent = imgHover.parentElement;
   // let imgBtn = item.lastElementChild
@@ -93,20 +77,45 @@ btnChooseImg.forEach(function(btn){
     let button = e.target;
     let buttonParent = button.parentElement;
 
-    if (button.innerHTML == "Vote"){
+    if (button.innerHTML === "Vote" && imgCount <= 2){
       buttonParent.classList.add("selected-image");
       button.innerHTML = `Deselect`;
       imgCount++;
+      showSubmitBtn()
       console.log(imgCount)
-    } else if (button.innerHTML == "Deselect"){
+    } else if (button.innerHTML === "Vote" && imgCount === 3){
+      alert("You can only select a maximum of 3 images, please deselect an image to change your vote")
+      console.log(imgCount) 
+
+    } else if (button.innerHTML === "Deselect"){
       buttonParent.classList.remove("selected-image");
       button.innerHTML = `Vote`;
       imgCount--;
+      hideSubmitBtn()
       console.log(imgCount)
     }
+
+    counterArea.innerHTML = `You have voted for ${imgCount}/3 images`
+
+    
   })
 })
 
+function showSubmitBtn(){
+  if (imgCount === 3){
+    imgCounterSubmitBtn.style.opacity = ".9";
+    imgCounterSubmitBtn.style.pointerEvents = "auto";
+
+  }
+}
+
+function hideSubmitBtn(){
+  if (imgCount < 3){
+    imgCounterSubmitBtn.style.opacity = "0";
+    imgCounterSubmitBtn.style.pointerEvents = "none";
+
+  }
+}
 // for(let i = 0; i < imgBackground.length; i++){
 //   imgBackground.addEventListener("mouseover", function(){
 //     console.log("mouse over")
