@@ -116,6 +116,14 @@ function hideSubmitBtn(){
 
   }
 }
+
+imgCounterSubmitBtn.addEventListener("click", submitVotes);
+
+function submitVotes(){
+  alert("Congratulations, your votes have been submitted.")
+}
+
+
 // for(let i = 0; i < imgBackground.length; i++){
 //   imgBackground.addEventListener("mouseover", function(){
 //     console.log("mouse over")
