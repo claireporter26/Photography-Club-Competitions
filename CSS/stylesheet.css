@@ -12,6 +12,10 @@ body {
     flex-direction: column;
 } 
 
+.title-nav  {
+    min-height: auto;
+}
+
 .main-container {
     width: 85%;
     max-width: 800px;
@@ -101,6 +105,7 @@ body {
 
 footer {
     margin: auto;
+    min-height: auto;
 }
 
 .nav-form {
@@ -160,9 +165,7 @@ footer {
         font-size: 1.6rem;
     }
 
-    .nav-form {
-        flex-direction: column;
-    }
+    
 
 
     .btn-submit {
@@ -208,6 +211,10 @@ footer {
 
 
 @media only screen and (max-width: 576px) {
+    .nav-form {
+        flex-direction: column;
+    }
+    
     .registration-container {
         margin-top: 2em;
     } 
