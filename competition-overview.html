@@ -17,11 +17,20 @@
                 <!-- <h4 class="nav-collapsed-text">Login</h4> -->
             </button>
             <div class="collapse navbar-collapse nav-collapse-content flex-grow-0" id="loggedinmenu">
-                <ul class="navbar-nav align-items-center">
-                    <li class="nav-item">home</li>
-                    <li class="nav-item">other</li>
-                    <li class="nav-item">other</li>
-                </ul>
+                <form class="d-flex title-nav__form align-items-center nav-form" action="">
+                
+                    <!-- <div class="form-control me-2 title-nav__input"> -->
+                        <label for="username-signin" class="navbar-text mb-0">Username</label>
+                        <input class="form-control form-control-sm mx-2" name="username-signin" id="username-signin" type="text" aria-label="Username">
+                    <!--  -->
+                    <!-- <div class="title-nav__input"> -->
+                        <label for="password-signin" class="navbar-text mb-0">Password</label>
+                        <input class="form-control form-control-sm mx-2" name="password-signin" id="password-signin" type="password" aria-label="Password">
+                    <!-- </div> -->
+                    <!-- <div class="title-nav__input"> -->
+                        <button class="btn btn-outline-success btn-sm mx-3 btn-submit" type="submit">Submit</button>
+                    <!-- </div> -->    
+                </form>
                 <!-- <div class="d-flex flex-direction-column align-items-center navbar-nav">
                     <a class="nav-link" href="index.html">Home</a>
                     <a class="nav-link active" aria-current="page" href="competition-overview.html">Competitions</a>
