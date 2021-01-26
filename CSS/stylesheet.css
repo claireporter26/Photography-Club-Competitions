@@ -255,8 +255,8 @@ footer {
 
     
     .title-nav {
-        padding-top: 1.2rem !important;
-        padding-bottom: 1.2rem !important;
+        padding-top: 1.4rem !important;
+        padding-bottom: 1.4rem !important;
     }
     
     .registration-container {
@@ -296,6 +296,11 @@ footer {
     .main-container-lg{
         
         padding: .5em;
+    }
+
+    .title-nav {
+        padding-top: 1.3rem !important;
+        padding-bottom: 1.3rem !important;
     }
 
     .nav-collapse-content {
