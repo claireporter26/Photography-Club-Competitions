@@ -31,9 +31,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.dropdown-backdrop {
-    position: static;
-}
+
 
 .main-container {
     width: 85%;
