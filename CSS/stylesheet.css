@@ -297,6 +297,10 @@ footer {
         
         padding: .5em;
     }
+
+    .nav-collapse-content {
+        display: block;
+    }
     
     .page-header {
         margin-top: .5em;
