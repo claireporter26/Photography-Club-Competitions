@@ -25,11 +25,11 @@ body {
 } */
 
 
-.title-nav  {
+/* .title-nav  {
     
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
+} */
 
 .main-container {
     width: 85%;
@@ -172,7 +172,7 @@ footer {
 
     .competitions_img-bg {
         
-        background-color: green;
+       
         
     }
 } 
@@ -196,10 +196,10 @@ footer {
         padding-bottom: 1.5em !important;
     }
 
-    .title-nav {
+    /* .title-nav {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
-    }
+    } */
 
 
     .btn-submit {
@@ -252,10 +252,10 @@ footer {
     }
 
     
-    .title-nav {
+    /* .title-nav {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
-    }
+    } */
     
     .registration-container {
         margin-top: 2em;
@@ -296,10 +296,10 @@ footer {
         padding: .5em;
     }
 
-    .title-nav {
+    /* .title-nav {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
-    }
+    } */
 
     .nav-collapse-content {
         display: block;
