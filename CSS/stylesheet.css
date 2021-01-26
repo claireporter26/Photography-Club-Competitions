@@ -20,6 +20,9 @@ body {
     color: #fff;
 }
 
+.nav-collapse-content {
+    display: block;
+}
 
 
 .title-nav  {
