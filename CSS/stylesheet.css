@@ -12,8 +12,18 @@ body {
     flex-direction: column;
 } 
 
+.link--white {
+    color: #fff;
+}
+
+.link--white:hover {
+    color: #fff;
+}
+
 .title-nav  {
     min-height: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
 }
 
 .main-container {
@@ -168,13 +178,13 @@ footer {
     }
 
     footer {
-        padding-top: 2em !important;
-        padding-bottom: 2em !important;
+        padding-top: 1.5em !important;
+        padding-bottom: 1.5em !important;
     }
 
     .title-nav {
-        padding-top: 2rem !important;
-        padding-bottom: 2rem !important;
+        padding-top: 1.5em !important;
+        padding-bottom: 1.5em !important;
     }
 
 
