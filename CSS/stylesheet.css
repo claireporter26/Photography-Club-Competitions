@@ -3,13 +3,18 @@
 }
 
 html {
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+    color:rgb(37, 35, 35);
+    background: url(/Images/landscape-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 } 
 
 .link--white {
@@ -18,6 +23,12 @@ body {
 
 .link--white:hover {
     color: #fff;
+}
+
+.accent-bg-main {
+    /* background-color: rgba(255,149,56, .6); */
+    background-image: linear-gradient(rgb(245, 239, 235), rgb(250, 232, 219));
+    
 }
 
 /* .nav-collapse-content {
@@ -37,6 +48,7 @@ body {
     width: 85%;
     max-width: 800px;
     margin: auto;
+   
 }
 
 .main-container-lg{
@@ -50,6 +62,8 @@ body {
 .registration-container {
     margin-top: 3em;
     margin-bottom: 3em;
+    border-radius: 5px;
+    
 }
 
 .registration-policy-statement {
@@ -109,6 +123,10 @@ body {
     display: none;
 }
 
+.btn-submit {
+    border-radius: 2px;
+}
+
 .btn-submit-votes {
     background-color: rgb(64, 204, 64);
     opacity: 0;
@@ -120,8 +138,17 @@ body {
     display: block;
 }
 
+.nav-collapsed-btn {
+    background-color: rgba(255,149,56,.8);
+    /* background-color: rgb(250, 232, 219); */
+
+    /* background-image: linear-gradient(rgba(255,149,56, .8), rgb(250, 232, 219)); */
+    color: rgb(37, 35, 35) !important;
+}
+
 footer {
-    margin: auto;
+    margin: auto auto 0 auto;
+   
     min-height: auto;
     
     
