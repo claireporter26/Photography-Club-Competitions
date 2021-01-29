@@ -16,9 +16,12 @@ let imgCount = 0;
 let counterArea = document.querySelector(".counter")
 let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
 
+
 // let currentImageCheckbox;
 
-
+function hamburgerToggle(x) {
+  x.classList.toggle("change");
+}
 
 
 let exampleModal = document.getElementById('imgZoomModal')

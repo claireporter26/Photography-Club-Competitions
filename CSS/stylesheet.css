@@ -14,6 +14,7 @@ body {
     color:rgb(37, 35, 35);
   
     font-family: 'PT Serif', serif;
+    justify-content: center;
   
   
     
@@ -59,6 +60,9 @@ body {
     width: 85%;
     max-width: 800px;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    
    
 }
 
@@ -74,6 +78,7 @@ body {
     margin-top: 3em;
     margin-bottom: 3em;
     border-radius: 5px;
+    max-width: 500px;
     
 }
 
@@ -158,6 +163,29 @@ body {
     color: rgb(37, 35, 35) !important;
 }
 
+.hamburger-line {
+    width: 30px;
+    height: 3px;
+    background-color:rgb(37, 35, 35);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .hamburger-line--1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 6px) ;
+    transform: rotate(-45deg) translate(-5px, 7px) ;
+}
+
+
+.change .hamburger-line--2 {
+    opacity: 0;
+}
+
+.change .hamburger-line--3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -6px) ;
+    transform: rotate(45deg) translate(-5px, -6px) ;
+}
+
 
 
 footer {
@@ -178,7 +206,7 @@ footer {
 }
 
 .page-header {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1em;
     
 }
@@ -199,7 +227,9 @@ footer {
 }
 
 .selected-image {
-    border: solid 3px rgb(98, 247, 98);
+    /* border: solid 3px rgb(98, 247, 98); */
+    border: solid 3px rgb(235, 153, 95);
+    
 }
 
 /* Media Queries */
@@ -209,15 +239,7 @@ footer {
 /* //media queries */
 
 @media only screen and (max-width: 1000px) {
-    .main-container {
-        max-width: 500px;
-    }
-
-    .competitions_img-bg {
-        
-       
-        
-    }
+    
 } 
 
 @media only screen and (max-width: 992px) {
@@ -350,6 +372,7 @@ footer {
     
     .page-header {
         margin-top: .5em;
+        font-size: 1.9rem;
         
     }
 
