@@ -4,6 +4,7 @@
 
 html {
     height: 100%;
+   
 }
 
 body {
@@ -11,11 +12,21 @@ body {
     display: flex;
     flex-direction: column;
     color:rgb(37, 35, 35);
-    background: url(/Images/landscape-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+  
+    font-family: 'PT Serif', serif;
+  
+  
     
 } 
+
+.body-homepage {
+    background: url(/Images/landscape-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.brand {
+    font-style: italic;
+}
 
 .link--white {
     color: #fff;
@@ -27,7 +38,7 @@ body {
 
 .accent-bg-main {
     /* background-color: rgba(255,149,56, .6); */
-    background-image: linear-gradient(rgb(245, 239, 235), rgb(250, 232, 219));
+    background-image: radial-gradient(rgb(247, 235, 221) 30%, rgb(235, 153, 95) );
     
 }
 
@@ -38,8 +49,8 @@ body {
 
 .title-nav  {
     /* height: auto; */
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 
@@ -139,12 +150,15 @@ body {
 }
 
 .nav-collapsed-btn {
-    background-color: rgba(255,149,56,.8);
+    /* background-color: rgba(255,149,56,.8); */
+    background-color: rgb(235, 153, 95);
     /* background-color: rgb(250, 232, 219); */
 
     /* background-image: linear-gradient(rgba(255,149,56, .8), rgb(250, 232, 219)); */
     color: rgb(37, 35, 35) !important;
 }
+
+
 
 footer {
     margin: auto auto 0 auto;

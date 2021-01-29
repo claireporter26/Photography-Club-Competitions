@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/stylesheet.css">
     <title>Photography Club</title>
 </head>
     
-<body>
+<body class="body-homepage">
     
     <nav class="navbar d-flex justify-content-between navbar-nav navbar-expand-lg navbar-dark bg-dark px-4 title-nav">
         <div class="container-fluid">
             <a class="navbar-brand brand mb-0" href="index.html">Photography Club</a>
 
-            <button class="navbar-toggler nav-collapsed-btn pb-2" type="button" data-bs-toggle="collapse" data-bs-target="#homepagenav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler nav-collapsed-btn" type="button" data-bs-toggle="collapse" data-bs-target="#homepagenav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="">Login</span>
             </button>
             <div class="collapse navbar-collapse nav-collapse-content flex-grow-0" id="homepagenav">
@@ -35,7 +37,11 @@
     <div class="main-container">
         
         <div class="accent-bg-main registration-container mb-5 p-5">
-            <h2 class="registration-header mb-5">Register for an account below</h2>
+            <div class="registration-header mb-5 text-center">
+                <h2 class="mb-4">Are you new here?</h2>
+                <h3>Register for an account below</h3s>
+            </div>
+            
             <form action="">
                 <div class="mb-3">
                     <label for="username-reg" class="form-label">Username</label>
