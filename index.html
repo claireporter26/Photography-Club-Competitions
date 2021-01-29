@@ -22,7 +22,7 @@
             <div class="collapse navbar-collapse nav-collapse-content flex-grow-0" id="homepagenav">
                 <form class="d-flex title-nav__form align-items-center nav-form" action="">
                     
-                    <label for="username-signin" class="navbar-text mb-0">Username</label>
+                    <label for="username-signin" class="navbar-text mb-0">Email</label>
                     <input class="form-control form-control-sm mx-2" name="username-signin" id="username-signin" type="text" aria-label="Username">
                     
                     <label for="password-signin" class="navbar-text mb-0">Password</label>
@@ -38,23 +38,24 @@
         
         <div class="accent-bg-main registration-container mb-5 p-5">
             <div class="registration-header mb-5 text-center">
-                <h2 class="mb-4">Are you new here?</h2>
-                <h3>Register for an account below</h3s>
+                <h2 class="mb-4 registration-header-lg">Are you new here?</h2>
+                <h3 class="registration-header-sm">Register for an account below</h3s>
             </div>
             
             <form action="">
                 <div class="mb-3">
-                    <label for="username-reg" class="form-label">Username</label>
+                    <label for="username-reg" class="form-label">First Name</label>
                     <input class="form-control" name="username-reg" id="username-reg" type="text">
                 </div>
                 <div class="mb-3">
+                    <label for="email-reg" class="form-label">Email Address</label>
+                    <input class="form-control" name="email-reg" id="email-reg" type="email">
+                </div>
+                <div class="mb-4">
                     <label for="password-reg" class="form-label">Password</label>
                     <input class="form-control" name="password-reg" id="password-reg" type="password">
                 </div>
-                <div class="mb-4">
-                    <label for="email-reg" class="form-label">Email</label>
-                    <input class="form-control" name="email-reg" id="email-reg" type="email">
-                </div>
+                
             
                 <button type="submit" class="btn-primary btn-submit">Submit</button>
                 <p class="form-text registration-policy-statement">By clicking submit you are agreeing to our <a href="privacypolicy.html">Privacy Policy</a> and <a href="#">Terms and Conditions</a></p>

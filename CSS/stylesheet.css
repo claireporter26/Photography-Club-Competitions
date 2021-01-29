@@ -2,9 +2,12 @@
     box-sizing: border-box;
 }
 
+img {
+    max-width: 100%;
+}
+
 html {
     height: 100%;
-   
 }
 
 body {
@@ -12,12 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     color:rgb(37, 35, 35);
-  
     font-family: 'PT Serif', serif;
     justify-content: center;
-  
-  
-    
 } 
 
 .body-homepage {
@@ -38,18 +37,14 @@ body {
 }
 
 .accent-bg-main {
-    /* background-color: rgba(255,149,56, .6); */
+    
     background-image: radial-gradient(rgb(247, 235, 221) 30%, rgb(235, 153, 95) );
     
 }
 
-/* .nav-collapse-content {
-    display: block;
-} */
-
 
 .title-nav  {
-    /* height: auto; */
+
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
@@ -102,7 +97,7 @@ body {
 }
 
 .competitions_img-row {
-    /* height: 150px; */
+ 
     align-items: center;
     justify-content: center;
 }
@@ -110,7 +105,7 @@ body {
 .competitions_img-bg {
     max-width: 145px;
     height: 145px;
-    /* margin: .5em; */
+   
     background-color: rgba(8, 7, 7, 0.021);
     display: flex;
     align-items: center;
@@ -126,12 +121,6 @@ body {
     cursor: pointer;
     
 }
-
-
-
-
-
-
 
 .btn__img-choice {
     position: absolute;
@@ -155,11 +144,7 @@ body {
 }
 
 .nav-collapsed-btn {
-    /* background-color: rgba(255,149,56,.8); */
     background-color: rgb(235, 153, 95);
-    /* background-color: rgb(250, 232, 219); */
-
-    /* background-image: linear-gradient(rgba(255,149,56, .8), rgb(250, 232, 219)); */
     color: rgb(37, 35, 35) !important;
 }
 
@@ -190,19 +175,11 @@ body {
 
 footer {
     margin: auto auto 0 auto;
-   
     min-height: auto;
-    
-    
-    /* align-self: center; */
 }
 
 .footer-item {
     list-style-type: none;
-}
-
-.nav-form {
-    /* flex-direction: column; */
 }
 
 .page-header {
@@ -211,14 +188,6 @@ footer {
     
 }
 
-
-/* .nav--visible {
-    visibility: visible;
-    height: auto;
-    position: relative;
-    display: block;
-    width: 100%;
-} */
 .modal-image {
 
     max-width: 85%;
@@ -227,30 +196,26 @@ footer {
 }
 
 .selected-image {
-    /* border: solid 3px rgb(98, 247, 98); */
     border: solid 3px rgb(235, 153, 95);
-    
 }
+
+/* .enterbtn-christmas-comp {
+    pointer-events: none;
+} */
+
 
 /* Media Queries */
 
-
-
-/* //media queries */
-
 @media only screen and (max-width: 1000px) {
-    
-} 
-
-@media only screen and (max-width: 992px) {
-    
-  }
+    .page-subtitle {
+        margin-bottom: 2rem;
+    }
+}
 
 @media only screen and (max-width: 850px) {
     body {
       font-size: .9rem;
     }
-   
 
     .registration-header {
         font-size: 1.6rem;
@@ -265,7 +230,6 @@ footer {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
     }
-
 
     .btn-submit {
         margin: 1.2em auto;
@@ -288,10 +252,7 @@ footer {
         margin-bottom: 1em;
         max-width: 230px;
         min-width: 230px;
-        height: 230px;
-        
-       
-        
+        height: 230px;   
     }
 
     .competition_img {
@@ -299,24 +260,20 @@ footer {
         max-height: 225px;
     } 
 
-  
    .page-subtitle {
     font-size: 1.1rem;
     font-weight: lighter;
     margin-bottom: 1.5em;
     }
 } 
- 
+   
 
-  
-
-/* //was 576px */
+/* //was 576px - Bootstrap's breakpoint */
 @media only screen and (max-width: 644px) {
     .nav-form {
         flex-direction: column;
     }
 
-    
     .title-nav {
         padding-top: 1.5rem !important;
         padding-bottom: 1.5rem !important;
@@ -325,39 +282,19 @@ footer {
     .registration-container {
         margin-top: 2em;
     } 
- 
-    /* .competitions_img-row {
-     margin-bottom: 1em;
- } */
- .competitions_img-row {
-    justify-content: center;
-}
 
- .competitions_img-bg {
-     margin-bottom: 1em;
-     
- }
+    .competitions_img-row {
+        justify-content: center;
+    }
 
- .competitions_img-bg {
+    .competitions_img-bg {
+        margin-bottom: 1em;
         
-    
-    
-}
-
- /* .page-subtitle {
-    font-size: 1.1rem;
-    font-weight: lighter;
-    margin-bottom: 1.5em;
-} */
- 
- 
+    }
  }
-
-
 
 @media only screen and (max-width: 400px) {
     .main-container-lg{
-        
         padding: .5em;
     }
 
@@ -369,6 +306,14 @@ footer {
     .nav-collapse-content {
         display: block;
     }
+
+    .welcome {
+        font-size: .6rem;
+    }
+
+    .welcome-header {
+        font-size: 1.7rem;
+    }
     
     .page-header {
         margin-top: .5em;
@@ -376,19 +321,18 @@ footer {
         
     }
 
-    /* .page-subtitle {
-        font-size: 1.1rem;
-        font-weight: lighter;
-        margin-bottom: 1.5em;
-    } */
+    .registration-header-lg {
+        font-size: 1.7rem;
+    }
+
+    .registration-header-sm {
+        font-size: 1rem;
+    }
     
     .competitions_img-bg {
         max-width: 185px;
         height: 185px;
-        margin-bottom: .5em;
-       
-        
-        
+        margin-bottom: .5em; 
     } 
   
 

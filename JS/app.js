@@ -1,10 +1,3 @@
-// const navToggle = document.querySelector('.nav-toggler');
-// const navMain = document.querySelector('#navbarSupportedContent')
-
-// navToggle.addEventListener('click', () => {
-//     navMain.classList.toggle('nav--visible');
-// })
-
 
 let chosenImage;
 let chosenImageTarget;
@@ -15,43 +8,30 @@ let image = document.querySelectorAll(".competition_img")
 let imgCount = 0;
 let counterArea = document.querySelector(".counter")
 let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
+let enterBtnChristmasComp = document.querySelector(".enterbtn-christmas-comp");
+const competitionsEntered = ["testing"]
 
-
-// let currentImageCheckbox;
 
 function hamburgerToggle(x) {
   x.classList.toggle("change");
 }
 
 
-let exampleModal = document.getElementById('imgZoomModal')
-exampleModal.addEventListener('show.bs.modal', function (event) {
-  chosenImage = event.relatedTarget.src;
-  chosenImageTarget = event.relatedTarget;
-
-  // currentImageCheckbox = event.imageCheckbox;
+  // let exampleModal = document.getElementById('imgZoomModal')
+  // exampleModal.addEventListener('show.bs.modal', function (event) {
+  //   chosenImage = event.relatedTarget.src;
+  //   chosenImageTarget = event.relatedTarget;
   
-
+  //   let imageArea = exampleModal.querySelector(".modal-image")
   
-  let imageArea = exampleModal.querySelector(".modal-image")
-
-  imageArea.src = chosenImage;
- 
-})
-
-
-
-// imgBackground.addEventListener("onMouseOver", function(event){
-//   let chooseBtn = event.target;
-//   chooseBtn.btnChooseImg.style.display = "inline-block";
-// });
+  //   imageArea.src = chosenImage;
+   
+  // })
 
 
 
 imgBackground.forEach(function(item){
   imgHover = item;
-  // let imgParent = imgHover.parentElement;
-  // let imgBtn = item.lastElementChild
   let imgBtn = imgHover.lastElementChild
 
 
@@ -100,7 +80,6 @@ btnChooseImg.forEach(function(btn){
 
     counterArea.innerHTML = `You have voted for ${imgCount}/3 images`
 
-    
   })
 })
 
@@ -109,6 +88,7 @@ function showSubmitBtn(){
     imgCounterSubmitBtn.style.opacity = ".9";
     imgCounterSubmitBtn.style.pointerEvents = "auto";
 
+    imgCounterSubmitBtn.addEventListener("click", submitVotes);
   }
 }
 
@@ -120,24 +100,19 @@ function hideSubmitBtn(){
   }
 }
 
-imgCounterSubmitBtn.addEventListener("click", submitVotes);
+
+
 
 function submitVotes(){
+  competitionsEntered.push("christmas");
+  console.log(competitionsEntered)
   alert("Congratulations, your votes have been submitted.")
+
+  enterBtnChristmasComp.style.pointerEvents = "none";
+  enterBtnChristmasComp.innerHTML = `Already Entered`;
+  enterBtnChristmasComp.classList.add("testing");
+
+  
+  
 }
 
-
-// for(let i = 0; i < imgBackground.length; i++){
-//   imgBackground.addEventListener("mouseover", function(){
-//     console.log("mouse over")
-//     // let chooseBtn = event.target;
-//     // chooseBtn.btnChooseImg.style.display = "inline-block";
-//   });
-// }
-
-
-
-
-// function imageCheckboxToggle (){
-//   alert("working checkbox")
-// }
