@@ -8,17 +8,46 @@ let image = document.querySelectorAll(".competition_img")
 let imgCount = 0;
 let counterArea = document.querySelector(".counter")
 let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
-let enterBtnChristmasComp = document.querySelector(".enterbtn-christmas-comp");
-const competitionsEntered = ["testing"]
+let enterBtnComp = document.querySelectorAll(".enterbtn-comp");
+const competitionsEntered = ["christmas"]
+
 
 
 function hamburgerToggle(x) {
   x.classList.toggle("change");
 }
 
+// function alert() {
+//   console.log("alert is working")
+//   // console.log(x)
+//   // x.innerHTML = `Already Entered`
+// }
+function hello(){
+  enterBtnComp.forEach(function(compbtn){
+    // compbtn.innerHTML = `already entered`
+    // if (competitionsEntered.contains(compbtn.id)){
+    //   console.log("yay")
+    // }
+    console.log(compbtn)
+    console.log(competitionsEntered)
+    
+    if(competitionsEntered.includes(compbtn.id)){
+      compbtn.innerHTML =  `Already Entered`
+      compbtn.style.pointerEvents = "none"
+    } else {
+      console.log("not included")
+    }
+    
+  
+  })
 
-  // let exampleModal = document.getElementById('imgZoomModal')
-  // exampleModal.addEventListener('show.bs.modal', function (event) {
+  
+}
+
+
+
+  // let imgModal = document.getElementById('imgZoomModal')
+  // imgModal.addEventListener('show.bs.modal', function (event) {
   //   chosenImage = event.relatedTarget.src;
   //   chosenImageTarget = event.relatedTarget;
   
@@ -105,12 +134,12 @@ function hideSubmitBtn(){
 
 function submitVotes(){
   competitionsEntered.push("christmas");
-  console.log(competitionsEntered)
+  // console.log(competitionsEntered)
   alert("Congratulations, your votes have been submitted.")
 
-  enterBtnChristmasComp.style.pointerEvents = "none";
-  enterBtnChristmasComp.innerHTML = `Already Entered`;
-  enterBtnChristmasComp.classList.add("testing");
+  // enterBtnChristmasComp.style.pointerEvents = "none";
+  // enterBtnChristmasComp.innerHTML = `Already Entered`;
+  // enterBtnChristmasComp.classList.add("testing");
 
   
   
