@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+    <title>Photography Club - Easter Competition</title>
+</head>
+<body class="competiton-page">
+    <!-- <div class="modal fade" id="imgZoomModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl ">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end">
+               
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                <img class="modal-image" src="" alt="">
+                <p class="modal-text"></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-end align-content-center">
+                
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <nav class="navbar d-flex justify-content-between navbar-nav navbar-expand-lg navbar-dark bg-dark px-4 title-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand brand mb-0" href="index.html">Photography Club</a>
+            <button class="navbar-toggler nav-collapsed-btn hamburger-btn" type="button" onclick="hamburgerToggle(this)" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-line hamburger-line--1"></div>
+                <div class="hamburger-line hamburger-line--2"></div>
+                <div class="hamburger-line hamburger-line--3"></div>
+            </button>
+            <div class="collapse navbar-collapse nav-collapse-content flex-grow-0" id="navbarSupportedContent">
+                <div class="navbar-nav text-center">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="competition-overview.html">Competitions</a>
+                    <a class="nav-link" href="account.html">Account</a>
+                    <a class="nav-link" href="#">Sign Out</a>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </nav>
+      <!-- <nav class="navbar d-flex justify-content-between navbar-nav navbar-expand-lg navbar-dark bg-dark px-4 title-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand brand mb-0" href="index.html">Photography Club</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse nav-collapse-content flex-grow-0" id="navbarSupportedContent">
+                <div class="navbar-nav text-center">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    <a class="nav-link active" aria-current="page" href="competition-overview.html">Competitions</a>
+                    <a class="nav-link" href="account.html">Account</a>
+                    <a class="nav-link" href="#">Sign Out</a>
+                    
+                
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <div class="modal fade" id="imgZoomModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl ">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-end">
+                <!-- <h5 class="modal-title" id="exampleModalLabel">Image</h5> -->
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                <img class="modal-image" src="" alt="" onContextMenu="return false;">
+                <p class="modal-text"></p>
+                </div>
+                <div class="modal-footer d-flex justify-content-end align-content-center">
+                
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-container-lg my-3 bg-light">
+        <div class="container competition-container">
+            <h1 class="page-header">Competition Images</h1>
+            <h5 class="page-subtitle mt-3">Double click on the images to enlarge them and vote for your three favourites.</h5>
+            <div class="counter-area">
+                <h5 class="counter">You have voted for 0/3 images</h5>
+                <a href="competition-overview.html"><button type="submit" class="btn btn-submit-votes mt-2" id="easter">Submit your votes</button></a>
+            </div>
+
+           <div class="row competitions_img-row mb-3">
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/animals-1278x852.jpg" src="./Images/animals-1278x852.jpg" onContextMenu="return false;" alt="Dog">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/cheetas-1391472-1280x800.jpg" src="./Images/cheetas-1391472-1280x800.jpg" onContextMenu="return false;" alt="Cheetas">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/insect-1279x1705.jpg" src="./Images/insect-1279x1705.jpg" onContextMenu="return false;" alt="Insect">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/easter-1279x879.jpg" src="./Images/easter-1279x879.jpg" onContextMenu="return false;" alt="Easter Eggs">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+               
+               
+           </div>
+           <div class="row competitions_img-row my-3">
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/cheetas-1391472-1280x800.jpg" src="./Images/cheetas-1391472-1280x800.jpg" onContextMenu="return false;" alt="Cheetas">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/animals-1278x852.jpg" src="./Images/animals-1278x852.jpg" onContextMenu="return false;" alt="Dog">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="../Images/easter-1279x879.jpg" src="./Images/easter-1279x879.jpg" onContextMenu="return false;" alt="Easter Eggs">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/christmas-1279x852.jpg" src="./Images/christmas-1279x852.jpg" onContextMenu="return false;" alt="Christmas Star">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+               
+               
+            
+            </div>
+            <div class="row competitions_img-row my-3">
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/swan-1279x1534.jpg" src="./Images/swan-1279x1534.jpg" onContextMenu="return false;" alt="Swan">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/cheetas-1391472-1280x800.jpg" src="./Images/cheetas-1391472-1280x800.jpg" onContextMenu="return false;" alt="Cheetas">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="./Images/easter-1279x879.jpg" src="./Images/easter-1279x879.jpg" onContextMenu="return false;" alt="Easter Eggs">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+                <div class="col-md-3 competitions_img-bg p-0">
+                    <img class="competition_img" data-bs-toggle="modal" data-bs-target="#imgZoomModal" data-bs-img="../Images/insect-1279x1705.jpg" src="./Images/insect-1279x1705.jpg" onContextMenu="return false;" alt="Insect">
+                    <button class="btn btn-success btn-sm btn__img-choice">Vote</button>
+                </div>
+               
+            
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid navbar bg-secondary justify-content-center align-items-center text-white footer-homepage" role="navigation">
+        <div class="container-fluid justify-content-center">
+            <li class="privacy-policy footer-item small"><a class="link--white" href="privacypolicy.html">Privacy Policy</a></li>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="JS/app.js"></script>
+
+
+</body>
+</html>

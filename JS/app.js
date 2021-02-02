@@ -10,8 +10,33 @@ let counterArea = document.querySelector(".counter")
 let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
 let enterBtnComp = document.querySelectorAll(".enterbtn-comp");
 const competitionsEntered = ["christmas"]
+let compsRetrievedArray;
+
+// updateCompsArray()
+initialCompsArray()
+localStorage.setItem("test", "things")
+
+function initialCompsArray(competitionsArray){
+  
+  let compsEnteredArray = localStorage.getItem(competitionsArray)
+
+compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
+
+localStorage.setItem('competitionsArray', JSON.stringify('compsEnteredArray'))
+localStorage.setItem("test", "things")
+
+console.log("initial update comps array working")
 
 
+}
+// storeCompsArray()
+
+// function storeCompsArray(){
+//   localStorage.setItem("competitionsArray", JSON.stringify('competitionsEntered'))
+//   let comps = localStorage.getItem("competitionsArray")
+//   compsRetrievedArray = JSON.parse(comps)
+//   console.log(compsRetrievedArray)
+// }
 
 function hamburgerToggle(x) {
   x.classList.toggle("change");
@@ -22,29 +47,11 @@ function hamburgerToggle(x) {
 //   // console.log(x)
 //   // x.innerHTML = `Already Entered`
 // }
-function hello(){
-  enterBtnComp.forEach(function(compbtn){
-    // compbtn.innerHTML = `already entered`
-    // if (competitionsEntered.contains(compbtn.id)){
-    //   console.log("yay")
-    // }
-    console.log(compbtn)
-    console.log(competitionsEntered)
-    
-    if(competitionsEntered.includes(compbtn.id)){
-      compbtn.innerHTML =  `Already Entered`
-      compbtn.style.pointerEvents = "none"
-    } else {
-      console.log("not included")
-    }
-    
-  
-  })
 
-  
+
+function testing(){
+  console.log(competitionsEntered)
 }
-
-
 
   // let imgModal = document.getElementById('imgZoomModal')
   // imgModal.addEventListener('show.bs.modal', function (event) {
@@ -133,15 +140,67 @@ function hideSubmitBtn(){
 
 
 function submitVotes(){
-  competitionsEntered.push("christmas");
+  console.log(imgCounterSubmitBtn.id)
+  // competitionsEntered.push(imgCounterSubmitBtn.id);
+  updateCompsArray()
+  // console.log(competitionsEntered)
+
+  // sessionStorage.setItem("competitionsArray", JSON.stringify(competitionsEntered))
+  // let comps = sessionStorage.getItem("competitionsArray")
+  // compsRetrievedArray = JSON.parse(comps)
+  console.log(compsRetrievedArray)
   // console.log(competitionsEntered)
   alert("Congratulations, your votes have been submitted.")
+  
+  // storeCompsArray()
 
   // enterBtnChristmasComp.style.pointerEvents = "none";
   // enterBtnChristmasComp.innerHTML = `Already Entered`;
   // enterBtnChristmasComp.classList.add("testing");
 
   
+  
+}
+
+
+function updateCompsArray(competitionsArray, compsSubmitBtnId){
+  compsSubmitBtnId = imgCounterSubmitBtn.id;
+  let compsEnteredArray = localStorage.getItem(competitionsArray)
+
+compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
+compsEnteredArray.push(compsSubmitBtnId)
+localStorage.setItem(competitionsArray, JSON.stringify(compsEnteredArray))
+
+console.log("update comps array working")
+
+
+}
+
+function hello(){
+  console.log(competitionsEntered)
+  enterBtnComp.forEach(function(compbtn){
+    // compbtn.innerHTML = `already entered`
+    // if (competitionsEntered.contains(compbtn.id)){
+    //   console.log("yay")
+    // }
+    
+    console.log("hello is working")
+    let comps = localStorage.getItem("competitionsArray")
+    console.log(comps)
+    compsRetrievedArray = JSON.parse(comps)
+    
+    
+    
+    if(compsRetrievedArray.includes(compbtn.id)){
+      compbtn.innerHTML =  `Already Entered`
+      compbtn.style.pointerEvents = "none"
+    } else {
+      console.log("not included")
+    }
+    
+  
+  })
+
   
 }
 
