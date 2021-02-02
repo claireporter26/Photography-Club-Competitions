@@ -14,16 +14,24 @@ let compsRetrievedArray;
 
 // updateCompsArray()
 initialCompsArray()
-localStorage.setItem("test", "things")
+
 
 function initialCompsArray(competitionsArray){
   
-  let compsEnteredArray = localStorage.getItem(competitionsArray)
+let compsEnteredArray = localStorage.getItem(competitionsArray)
 
-compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
+if(compsEnteredArray){
+  compsEnteredArray.split(',')
+}else{
+  []
+}
 
-localStorage.setItem('competitionsArray', JSON.stringify('compsEnteredArray'))
-localStorage.setItem("test", "things")
+
+// compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
+
+localStorage.setItem('competitionsArray', JSON.stringify(compsEnteredArray))
+
+console.log("the initial array is " + compsEnteredArray)
 
 console.log("initial update comps array working")
 
@@ -49,9 +57,7 @@ function hamburgerToggle(x) {
 // }
 
 
-function testing(){
-  console.log(competitionsEntered)
-}
+
 
   // let imgModal = document.getElementById('imgZoomModal')
   // imgModal.addEventListener('show.bs.modal', function (event) {
@@ -100,18 +106,20 @@ btnChooseImg.forEach(function(btn){
       buttonParent.classList.add("selected-image");
       button.innerHTML = `Deselect`;
       imgCount++;
+
+      
       showSubmitBtn()
-      console.log(imgCount)
+      
     } else if (button.innerHTML === "Vote" && imgCount === 3){
       alert("You can only select a maximum of 3 images, please deselect an image to change your vote")
-      console.log(imgCount) 
+      
 
     } else if (button.innerHTML === "Deselect"){
       buttonParent.classList.remove("selected-image");
       button.innerHTML = `Vote`;
       imgCount--;
       hideSubmitBtn()
-      console.log(imgCount)
+      
     }
 
     counterArea.innerHTML = `You have voted for ${imgCount}/3 images`
@@ -120,6 +128,9 @@ btnChooseImg.forEach(function(btn){
 })
 
 function showSubmitBtn(){
+
+  let submitBtnId = imgCounterSubmitBtn.id;
+
   if (imgCount === 3){
     imgCounterSubmitBtn.style.opacity = ".9";
     imgCounterSubmitBtn.style.pointerEvents = "auto";
@@ -139,16 +150,17 @@ function hideSubmitBtn(){
 
 
 
-function submitVotes(){
-  console.log(imgCounterSubmitBtn.id)
+function submitVotes(e){
+  let compName = e.target.id;
+  
   // competitionsEntered.push(imgCounterSubmitBtn.id);
-  updateCompsArray()
+  updateCompsArray(compName)
   // console.log(competitionsEntered)
 
   // sessionStorage.setItem("competitionsArray", JSON.stringify(competitionsEntered))
   // let comps = sessionStorage.getItem("competitionsArray")
   // compsRetrievedArray = JSON.parse(comps)
-  console.log(compsRetrievedArray)
+  
   // console.log(competitionsEntered)
   alert("Congratulations, your votes have been submitted.")
   
@@ -163,31 +175,45 @@ function submitVotes(){
 }
 
 
-function updateCompsArray(competitionsArray, compsSubmitBtnId){
-  compsSubmitBtnId = imgCounterSubmitBtn.id;
-  let compsEnteredArray = localStorage.getItem(competitionsArray)
+function updateCompsArray(compName){
+  
+  localStorage.setItem('test2', 'hello')
+  // let testedArray = localStorage.getItem('test2')
 
-compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
-compsEnteredArray.push(compsSubmitBtnId)
-localStorage.setItem(competitionsArray, JSON.stringify(compsEnteredArray))
+  // let testRetrievedArray = JSON.parse(testedArray)
+  console.log(compName)
+  // console.log(testRetrievedArray)
+
+
+
+//   let compsEnteredArray = localStorage.getItem("competitionsArray")
+
+//   compsRetrievedArray = JSON.parse(compsEnteredArray)
+//   console.log(compsEnteredArray)
+
+// // compsEnteredArray.push(compName)
+
+// localStorage.setItem('competitionsArray', JSON.stringify(compsEnteredArray))
 
 console.log("update comps array working")
 
 
 }
 
-function hello(){
-  console.log(competitionsEntered)
+function compPageLoad(){
+  
   enterBtnComp.forEach(function(compbtn){
     // compbtn.innerHTML = `already entered`
     // if (competitionsEntered.contains(compbtn.id)){
     //   console.log("yay")
     // }
     
-    console.log("hello is working")
+    // console.log("hello is working")
     let comps = localStorage.getItem("competitionsArray")
-    console.log(comps)
+   
     compsRetrievedArray = JSON.parse(comps)
+
+    
     
     
     
