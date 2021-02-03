@@ -16,22 +16,34 @@ let compsRetrievedArray;
 initialCompsArray()
 
 
-function initialCompsArray(competitionsArray){
+function initialCompsArray(){
   
-let compsEnteredArray = localStorage.getItem(competitionsArray)
+let compsEnteredArray = localStorage.getItem('competitionsArray')
 
-if(compsEnteredArray){
-  compsEnteredArray.split(',')
-}else{
-  []
+// if(compsEnteredArray){
+//   compsEnteredArray.split(',')
+// }else{
+//   []
+// }
+
+if(!compsEnteredArray){
+  localStorage.setItem('competitionsArray', '[]')
 }
+
+// let testingArray = localStorage.getItem('competitionsArray')
+// console.log(testingArray)
+
+// let parsedArray = JSON.parse(testingArray)
+
+// console.log(parsedArray)
+
 
 
 // compsEnteredArray = compsEnteredArray ? compsEnteredArray.split(',') : [];
 
-localStorage.setItem('competitionsArray', JSON.stringify(compsEnteredArray))
+// localStorage.setItem('competitionsArray', JSON.stringify(compsEnteredArray))
 
-console.log("the initial array is " + compsEnteredArray)
+// console.log("the initial array is " + compsEnteredArray)
 
 console.log("initial update comps array working")
 
@@ -155,8 +167,8 @@ function submitVotes(e){
   
   // competitionsEntered.push(imgCounterSubmitBtn.id);
   updateCompsArray(compName)
-  // console.log(competitionsEntered)
-
+  
+console.log("compname is " + compName)
   // sessionStorage.setItem("competitionsArray", JSON.stringify(competitionsEntered))
   // let comps = sessionStorage.getItem("competitionsArray")
   // compsRetrievedArray = JSON.parse(comps)
@@ -177,23 +189,26 @@ function submitVotes(e){
 
 function updateCompsArray(compName){
   
-  localStorage.setItem('test2', 'hello')
+  // let submitCompsArray = localStorage.getItem('competitionsArray')
+
+  
+  
   // let testedArray = localStorage.getItem('test2')
 
   // let testRetrievedArray = JSON.parse(testedArray)
-  console.log(compName)
+ 
   // console.log(testRetrievedArray)
 
 
 
-//   let compsEnteredArray = localStorage.getItem("competitionsArray")
+  let compsEnteredArray = localStorage.getItem("competitionsArray")
 
-//   compsRetrievedArray = JSON.parse(compsEnteredArray)
-//   console.log(compsEnteredArray)
+  compsParsedArray = JSON.parse(compsEnteredArray)
+  // console.log(compsParsedArray)
 
-// // compsEnteredArray.push(compName)
+compsParsedArray.push(compName)
 
-// localStorage.setItem('competitionsArray', JSON.stringify(compsEnteredArray))
+localStorage.setItem('competitionsArray', JSON.stringify(compsParsedArray))
 
 console.log("update comps array working")
 
@@ -203,26 +218,36 @@ console.log("update comps array working")
 function compPageLoad(){
   
   enterBtnComp.forEach(function(compbtn){
+
+    let compsEnteredArray = localStorage.getItem('competitionsArray')
+
+    let compsParsedArray = JSON.parse(compsEnteredArray)
+
+    let compBtnId = compbtn.id;
+    if (compsParsedArray.includes(compBtnId)){
+      compbtn.innerHTML = `Already Entered`;
+      compbtn.style.pointerEvents = "none"
+    }
     // compbtn.innerHTML = `already entered`
     // if (competitionsEntered.contains(compbtn.id)){
     //   console.log("yay")
     // }
     
     // console.log("hello is working")
-    let comps = localStorage.getItem("competitionsArray")
+    
    
-    compsRetrievedArray = JSON.parse(comps)
+    
 
     
     
     
     
-    if(compsRetrievedArray.includes(compbtn.id)){
-      compbtn.innerHTML =  `Already Entered`
-      compbtn.style.pointerEvents = "none"
-    } else {
-      console.log("not included")
-    }
+    // if(compsRetrievedArray.includes(compbtn.id)){
+    //   compbtn.innerHTML =  `Already Entered`
+    //   compbtn.style.pointerEvents = "none"
+    // } else {
+    //   console.log("not included")
+    // }
     
   
   })
