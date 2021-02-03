@@ -255,3 +255,13 @@ function compPageLoad(){
   
 }
 
+let clearStorage = document.querySelector('.clear-storage')
+
+clearStorage.addEventListener('click', clearLocalStorage)
+
+function clearLocalStorage(){
+    window.localStorage.clear();
+    
+}
+
+
