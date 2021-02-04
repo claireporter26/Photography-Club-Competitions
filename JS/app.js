@@ -27,6 +27,18 @@ function hamburgerToggle(x) {
   x.classList.toggle("change")
 }
 
+
+  // let imgModal = document.getElementById('imgZoomModal')
+  // imgModal.addEventListener('show.bs.modal', function (event) {
+  //   chosenImage = event.relatedTarget.src;
+  //   chosenImageTarget = event.relatedTarget;
+  
+  //   let imageArea = exampleModal.querySelector(".modal-image")
+  
+  //   imageArea.src = chosenImage;
+   
+  // })
+  
 imgBackground.forEach(function(item){
   imgHover = item
   let imgBtn = imgHover.lastElementChild

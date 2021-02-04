@@ -36,6 +36,10 @@ body {
     color: #fff;
 }
 
+.img-credits {
+    font-size: .7rem;
+}
+
 .accent-bg-main {
     
     background-image: radial-gradient(rgb(247, 235, 221) 30%, rgb(235, 153, 95) );
