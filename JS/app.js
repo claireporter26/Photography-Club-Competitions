@@ -30,7 +30,7 @@ function hamburgerToggle(x) {
 
 function eventListenerModal(){
 
-  if(!imgModal){
+  
     let imgModal = document.getElementById('imgZoomModal')
     imgModal.addEventListener('show.bs.modal', function (event) {
       chosenImage = event.relatedTarget.src;
@@ -42,7 +42,7 @@ function eventListenerModal(){
      
     })
 
-  }
+  
 
 }
   
