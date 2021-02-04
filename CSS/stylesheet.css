@@ -83,7 +83,7 @@ body {
 }
 
 .page-subtitle {
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 .competitions {
@@ -198,10 +198,6 @@ footer {
 .selected-image {
     border: solid 3px rgb(235, 153, 95);
 }
-
-/* .enterbtn-christmas-comp {
-    pointer-events: none;
-} */
 
 
 /* Media Queries */
