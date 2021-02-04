@@ -9,14 +9,15 @@ let imgCount = 0
 let counterArea = document.querySelector(".counter")
 let imgCounterSubmitBtn = document.querySelector(".btn-submit-votes")
 let enterBtnComp = document.querySelectorAll(".enterbtn-comp")
-let compsRetrievedArray
+let compsParsedArray
+let compsEnteredArray
 
 //update Competitions Entered from localStorage
 initialCompsArray()
 
 function initialCompsArray(){
   
-  let compsEnteredArray = localStorage.getItem('competitionsArray')
+  compsEnteredArray = localStorage.getItem('competitionsArray')
 
   if(!compsEnteredArray){
     localStorage.setItem('competitionsArray', '[]')
@@ -27,18 +28,25 @@ function hamburgerToggle(x) {
   x.classList.toggle("change")
 }
 
+function eventListenerModal(){
 
-  // let imgModal = document.getElementById('imgZoomModal')
-  // imgModal.addEventListener('show.bs.modal', function (event) {
-  //   chosenImage = event.relatedTarget.src;
-  //   chosenImageTarget = event.relatedTarget;
+  if(!imgModal){
+    let imgModal = document.getElementById('imgZoomModal')
+    imgModal.addEventListener('show.bs.modal', function (event) {
+      chosenImage = event.relatedTarget.src;
+      chosenImageTarget = event.relatedTarget;
+    
+      let imageArea = imgModal.querySelector(".modal-image")
+    
+      imageArea.src = chosenImage;
+     
+    })
+
+  }
+
+}
   
-  //   let imageArea = exampleModal.querySelector(".modal-image")
-  
-  //   imageArea.src = chosenImage;
-   
-  // })
-  
+
 imgBackground.forEach(function(item){
   imgHover = item
   let imgBtn = imgHover.lastElementChild
@@ -118,7 +126,7 @@ function submitVotes(e){
 
 function updateCompsArray(compName){
   
-  let compsEnteredArray = localStorage.getItem("competitionsArray")
+  compsEnteredArray = localStorage.getItem("competitionsArray")
 
   compsParsedArray = JSON.parse(compsEnteredArray)
   compsParsedArray.push(compName)
@@ -130,8 +138,8 @@ function compPageLoad(){
   
   enterBtnComp.forEach(function(compbtn){
 
-    let compsEnteredArray = localStorage.getItem('competitionsArray')
-    let compsParsedArray = JSON.parse(compsEnteredArray)
+    compsEnteredArray = localStorage.getItem('competitionsArray')
+    compsParsedArray = JSON.parse(compsEnteredArray)
     let compBtnId = compbtn.id;
 
     if (compsParsedArray.includes(compBtnId)){
